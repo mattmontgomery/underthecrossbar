@@ -1,0 +1,33 @@
+UTC\StatsBundle\Entity\OptaMatchLineup:
+    type: entity
+    table: null
+    indexes:
+        player_match_index:
+            columns: [match_id,team_id,player_id]
+            unique: true
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        matchId:
+            type: integer
+            column: match_id
+            associationKey: true
+        teamId:
+            type: integer
+            column: team_id
+        playerId:
+            type: integer
+            column: player_id
+        position:
+            type: string
+            length: 255
+        shirtNumber:
+            type: integer
+            column: shirt_number
+        status:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

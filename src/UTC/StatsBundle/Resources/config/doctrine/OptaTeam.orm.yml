@@ -1,0 +1,29 @@
+UTC\StatsBundle\Entity\OptaTeam:
+    type: entity
+    table: null
+    uniqueConstraints:
+        team_idx:
+            columns: [team_id]
+            unique: true
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        teamId:
+            type: integer
+            column: team_id
+            unique: true
+        country:
+            type: string
+            length: 255
+            nullable: true
+        name:
+            type: string
+            length: 255
+    uniqueConstraints:
+        team_idx:
+            columns: [team_id]
+            unique: true
+    lifecycleCallbacks: {  }

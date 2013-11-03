@@ -1,0 +1,111 @@
+<?php
+
+namespace UTC\StatsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * OptaVenue
+ */
+class OptaVenue
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var integer
+     */
+    private $venueId;
+
+    /**
+     * @var string
+     */
+    private $country;
+
+    /**
+     * @var string
+     */
+    private $name;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set venueId
+     *
+     * @param integer $venueId
+     * @return OptaVenue
+     */
+    public function setVenueId($venueId)
+    {
+        $this->venueId = $venueId;
+    
+        return $this;
+    }
+
+    /**
+     * Get venueId
+     *
+     * @return integer 
+     */
+    public function getVenueId()
+    {
+        return $this->venueId;
+    }
+
+    /**
+     * Set country
+     *
+     * @param string $country
+     * @return OptaVenue
+     */
+    public function setCountry($country)
+    {
+        $this->country = $country;
+    
+        return $this;
+    }
+
+    /**
+     * Get country
+     *
+     * @return string 
+     */
+    public function getCountry()
+    {
+        return $this->country;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return OptaVenue
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+}

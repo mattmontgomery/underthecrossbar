@@ -1,0 +1,26 @@
+UTC\StatsBundle\Entity\OptaMatchGoalAssist:
+    type: entity
+    table: null
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        matchId:
+            type: integer
+            column: match_id
+        teamId:
+            type: integer
+            column: team_id
+        goalId:
+            type: string
+            length: 255
+            column: goal_id
+        playerId:
+            type: integer
+            column: player_id
+        assistType:
+            type: string
+            column: assist_type
+    lifecycleCallbacks: {  }

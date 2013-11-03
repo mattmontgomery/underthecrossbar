@@ -1,0 +1,25 @@
+UTC\StatsBundle\Entity\OptaVenue:
+    type: entity
+    table: null
+    indexes:
+        venue_index:
+            columns: [venue_id]
+            unique: true
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        venueId:
+            type: integer
+            column: venue_id
+            unique: true
+        country:
+            type: string
+            length: 255
+            nullable: true
+        name:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

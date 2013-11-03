@@ -1,0 +1,8 @@
+utc_scarf:
+    resource: "@UTCScarfBundle/Resources/config/routing.yml"
+    prefix:   /
+
+utc_stats:
+    resource: "@UTCStatsBundle/Resources/config/routing.yml"
+    prefix:   /stats
+

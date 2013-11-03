@@ -1,0 +1,21 @@
+UTC\StatsBundle\Entity\FileStats:
+    type: entity
+    table: null
+    repositoryClass: UTC\StatsBundle\Entity\FileStatsRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        filename:
+            type: string
+            length: 255
+            unique: true
+        isProcessed:
+            type: boolean
+            column: is_processed
+        timestamp:
+            type: datetimetz
+            default: now
+    lifecycleCallbacks: {  }

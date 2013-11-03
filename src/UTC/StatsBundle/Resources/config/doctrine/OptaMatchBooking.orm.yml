@@ -1,0 +1,54 @@
+UTC\StatsBundle\Entity\OptaMatchBooking:
+    type: entity
+    table: null
+    indexes:
+        event_idx:
+            columns: [event_id]
+            unique: true
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        bookingId:
+            type: string
+            column: booking_id
+        matchId:
+            type: integer
+            column: match_id
+        teamId:
+            type: integer
+            column: team_id
+        playerId:
+            type: integer
+            column: player_id
+        card:
+            type: string
+            length: 255
+        cardType:
+            type: string
+            length: 255
+            column: card_type
+        eventId:
+            type: integer
+            column: event_id
+            unique: true
+        eventNumber:
+            type: integer
+            column: event_number
+        reason:
+            type: string
+        period:
+            type: string
+        bookingTime:
+            type: integer
+            column: booking_time
+        bookingTimestamp:
+            type: datetime
+            column: booking_timestamp
+    uniqueConstraints:
+        event_idx:
+            columns: [event_id]
+            unique: true
+    lifecycleCallbacks: {  }

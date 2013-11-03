@@ -1,0 +1,61 @@
+UTC\StatsBundle\Entity\OptaMatchGoal:
+    type: entity
+    table: null
+    indexes:
+        match_team_idx:
+            columns: [match_id,team_id]
+        goal_id_idx:
+            columns: [goal_id,match_id]
+        event_idx:
+            columns: [event_id]
+            unique: true
+        player_id_idx:
+            columns: [player_id]
+        team_id_idx:
+            columns: [team_id]
+        goal_type_idx:
+            columns: [goal_type]
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        eventId:
+            type: integer
+            column: event_id
+            unique: true
+        eventNumber:
+            type: integer
+            column: event_number
+        matchId:
+            type: integer
+            column: match_id
+        teamId:
+            type: integer
+            column: team_id
+        period:
+            type: string
+            length: 255
+        playerId:
+            type: integer
+            column: player_id
+        goalTime:
+            type: integer
+            column: goal_time
+        goalTimestamp:
+            type: datetimetz
+            column: goal_timestamp
+        goalType:
+            type: string
+            length: 255
+            column: goal_type
+        goalId:
+            type: string
+            length: 255
+            column: goal_id
+    uniqueConstraints:
+        event_idx:
+            columns: [event_id]
+            unique: true
+    lifecycleCallbacks: {  }

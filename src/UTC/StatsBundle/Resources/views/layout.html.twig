@@ -1,0 +1,11 @@
+{% extends "TwitterBootstrapBundle::layout.html.twig" %}
+{% block title %}{% filter trim %}{% block subtitle %}{% endblock %} Under the Crossbar Stats{% endfilter %}{% endblock %}
+{% block body %}
+    <div class="container">
+        {% block nav %}{% endblock %}
+        <h1>{% block page_header %}{% endblock %}</h1>
+        {% block container %}
+        {% endblock %}
+        {% block footer %}<footer>Source: github.com/mmontgomery/utc-stats</footer>{% endblock %}
+    </div>
+{% endblock %}

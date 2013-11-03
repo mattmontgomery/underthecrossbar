@@ -1,0 +1,26 @@
+UTC\StatsBundle\Entity\OptaMatchOfficial:
+    type: entity
+    table: null
+    indexes:
+        official_match_idx:
+            columns: [match_id, official_id, official_type]
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        matchId:
+            type: integer
+            column: match_id
+        officialId:
+            type: integer
+            column: official_id
+        officialType:
+            type: string
+            length: 255
+            column: official_type
+    uniqueContraints:
+        official_match_idx:
+            columns: [match_id, official_id, official_type]
+    lifecycleCallbacks: {  }

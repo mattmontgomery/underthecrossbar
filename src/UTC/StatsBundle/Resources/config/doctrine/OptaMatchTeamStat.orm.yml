@@ -1,0 +1,36 @@
+UTC\StatsBundle\Entity\OptaMatchTeamStat:
+    type: entity
+    table: null
+    indexes:
+        player_match_idx:
+            columns: [match_id, team_id, stat_type]
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        matchId:
+            type: integer
+            column: match_id
+        teamId:
+            type: integer
+            column: team_id
+        statType:
+            type: string
+            length: 255
+            column: stat_type
+        statValueFh:
+            type: integer
+            column: stat_value_fh
+        statValueSh:
+            type: integer
+            column: stat_value_sh
+        statValue:
+            type: string
+            length: 255
+            column: stat_value
+    uniqueContraints:
+        player_match_idx:
+            columns: [match_id, team_id, stat_type]
+    lifecycleCallbacks: {  }

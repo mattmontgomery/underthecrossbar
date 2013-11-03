@@ -1,0 +1,26 @@
+UTC\StatsBundle\Entity\OptaOfficial:
+    type: entity
+    table: null
+    indexes:
+        official_index:
+            columns: [official_id]
+            unique: true
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        officialId:
+            type: integer
+            column: official_id
+            unique: true
+        firstName:
+            type: string
+            length: 255
+            column: first_name
+        lastName:
+            type: string
+            length: 255
+            column: last_name
+    lifecycleCallbacks: {  }

@@ -1,0 +1,72 @@
+UTC\StatsBundle\Entity\OptaMatch:
+    type: entity
+    table: null
+    indexes:
+        match_index:
+            columns: [match_id,competition_id,season_id]
+            unique: true
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        matchId:
+            type: integer
+            column: match_id
+            unique: true
+        matchDate:
+            type: datetime
+            column: match_date
+        competitionId:
+            type: integer
+            column: competition_id
+        teams:
+            type: array
+        home_team_id:
+            type: integer
+        away_team_id:
+            type: integer
+        home_team_score:
+            type: integer
+        away_team_score:
+            type: integer
+        seasonId:
+            type: string
+            length: 255
+            column: season_id
+        matchDay:
+            type: integer
+            nullable: true
+            column: match_day
+        venueId:
+            type: integer
+            column: venue_id
+            nullable: true
+        matchType:
+            type: string
+            length: 255
+            nullable: true
+            column: match_type
+        period:
+            type: string
+            length: 255
+            nullable: true
+        weather:
+            type: string
+            length: 255
+            nullable: true
+        attendance:
+            type: integer
+            nullable: true
+        resultType:
+            type: string
+            length: 255
+            nullable: true
+        resultWinner:
+            type: integer
+            length: 255
+            nullable: true
+
+
+    lifecycleCallbacks: {  }

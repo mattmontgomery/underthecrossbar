@@ -1,0 +1,167 @@
+<?php
+
+namespace UTC\StatsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * OptaMatchPlayerStat
+ */
+class OptaMatchPlayerStat
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var integer
+     */
+    private $matchId;
+
+    /**
+     * @var integer
+     */
+    private $playerId;
+
+    /**
+     * @var string
+     */
+    private $statType;
+
+    /**
+     * @var integer
+     */
+    private $statValue;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set matchId
+     *
+     * @param integer $matchId
+     * @return OptaMatchPlayerStat
+     */
+    public function setMatchId($matchId)
+    {
+        $this->matchId = $matchId;
+    
+        return $this;
+    }
+
+    /**
+     * Get matchId
+     *
+     * @return integer 
+     */
+    public function getMatchId()
+    {
+        return $this->matchId;
+    }
+
+    /**
+     * Set playerId
+     *
+     * @param integer $playerId
+     * @return OptaMatchPlayerStat
+     */
+    public function setPlayerId($playerId)
+    {
+        $this->playerId = $playerId;
+    
+        return $this;
+    }
+
+    /**
+     * Get playerId
+     *
+     * @return integer 
+     */
+    public function getPlayerId()
+    {
+        return $this->playerId;
+    }
+
+    /**
+     * Set statType
+     *
+     * @param string $statType
+     * @return OptaMatchPlayerStat
+     */
+    public function setStatType($statType)
+    {
+        $this->statType = $statType;
+    
+        return $this;
+    }
+
+    /**
+     * Get statType
+     *
+     * @return string 
+     */
+    public function getStatType()
+    {
+        return $this->statType;
+    }
+
+    /**
+     * Set statValue
+     *
+     * @param integer $statValue
+     * @return OptaMatchPlayerStat
+     */
+    public function setStatValue($statValue)
+    {
+        $this->statValue = $statValue;
+    
+        return $this;
+    }
+
+    /**
+     * Get statValue
+     *
+     * @return integer
+     */
+    public function getStatValue()
+    {
+        return $this->statValue;
+    }
+    /**
+     * @var integer
+     */
+    private $teamId;
+
+
+    /**
+     * Set teamId
+     *
+     * @param integer $teamId
+     * @return OptaMatchPlayerStat
+     */
+    public function setTeamId($teamId)
+    {
+        $this->teamId = $teamId;
+    
+        return $this;
+    }
+
+    /**
+     * Get teamId
+     *
+     * @return integer 
+     */
+    public function getTeamId()
+    {
+        return $this->teamId;
+    }
+}

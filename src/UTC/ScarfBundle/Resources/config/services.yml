@@ -1,0 +1,7 @@
+parameters:
+#    utc_scarf.example.class: UTC\ScarfBundle\Example
+
+services:
+#    utc_scarf.example:
+#        class: %utc_scarf.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

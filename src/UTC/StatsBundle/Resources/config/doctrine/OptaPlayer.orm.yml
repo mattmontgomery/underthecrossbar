@@ -1,0 +1,30 @@
+UTC\StatsBundle\Entity\OptaPlayer:
+    type: entity
+    table: null
+    indexes:
+        player_name_index:
+            columns: [first_name,last_name,known_name]
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        playerId:
+            type: integer
+            column: player_id
+            unique: true
+        firstName:
+            type: string
+            length: 255
+            column: first_name
+        lastName:
+            type: string
+            length: 255
+            column: last_name
+        knownName:
+            type: string
+            length: 255
+            column: known_name
+            nullable: true
+    lifecycleCallbacks: {  }
