@@ -34,6 +34,7 @@
     <file path="/OptaMatchGoalAssist.orm.yml" changelist="3ff2741c-c47a-42bb-9d0d-6bdbe7322a7c" time="1383451832247" ignored="false" />
     <file path="/OptaMatchBooking.orm.yml" changelist="3ff2741c-c47a-42bb-9d0d-6bdbe7322a7c" time="1383454190191" ignored="false" />
     <file path="/OptaTeam.orm.yml" changelist="3ff2741c-c47a-42bb-9d0d-6bdbe7322a7c" time="1383459757475" ignored="false" />
+    <file path="/README.md" changelist="3ff2741c-c47a-42bb-9d0d-6bdbe7322a7c" time="1383460916263" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,13 +54,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FileProcessController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FileProcessController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Controller/FileProcessController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="5" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.55089194">
+            <state line="35" column="5" selection-start="1098" selection-end="1098" vertical-scroll-proportion="-21.875">
               <folding>
                 <element signature="e#46#103#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="112" selection-start="153" selection-end="153" vertical-scroll-proportion="0.061412487">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,15 +105,6 @@
         <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaMatchGoal.orm.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="58" column="30" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OptaOfficial.orm.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaOfficial.orm.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="33" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -155,7 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Entity/OptaMatchPlayerStat.php" />
         <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Controller/FileController.php" />
         <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaPlayer.orm.yml" />
@@ -171,6 +171,7 @@
         <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaMatchGoal.orm.yml" />
         <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaTeam.orm.yml" />
         <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Controller/FileProcessController.php" />
+        <option value="$PROJECT_DIR$/web/README.md" />
       </list>
     </option>
   </component>
@@ -640,13 +641,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaMatch.orm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="26" selection-start="1099" selection-end="1678" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaMatchOfficial.orm.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="26" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
@@ -747,10 +741,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Controller/FileProcessController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="5" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.55089194">
+        <state line="35" column="5" selection-start="1098" selection-end="1098" vertical-scroll-proportion="-21.875">
           <folding>
             <element signature="e#46#103#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="112" selection-start="153" selection-end="153" vertical-scroll-proportion="0.061412487">
+          <folding />
         </state>
       </provider>
     </entry>
