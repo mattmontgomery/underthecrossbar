@@ -19,7 +19,7 @@
     <file path="/FileProcessController.php" changelist="3ff2741c-c47a-42bb-9d0d-6bdbe7322a7c" time="1383460480768" ignored="false" />
     <file path="$PROJECT_DIR$/app/cache/dev/appDevDebugProjectContainer.php" changelist="3ff2741c-c47a-42bb-9d0d-6bdbe7322a7c" time="1383380111931" ignored="false" />
     <file path="/OptaMatch.orm.yml" changelist="3ff2741c-c47a-42bb-9d0d-6bdbe7322a7c" time="1383446335515" ignored="false" />
-    <file path="/a.dummy" changelist="3ff2741c-c47a-42bb-9d0d-6bdbe7322a7c" time="1383442656301" ignored="false" />
+    <file path="/a.dummy" changelist="3ff2741c-c47a-42bb-9d0d-6bdbe7322a7c" time="1383461020048" ignored="false" />
     <file path="/StatsController.php" changelist="3ff2741c-c47a-42bb-9d0d-6bdbe7322a7c" time="1383437420035" ignored="false" />
     <file path="/OptaMatchLineup.orm.yml" changelist="3ff2741c-c47a-42bb-9d0d-6bdbe7322a7c" time="1383430897079" ignored="false" />
     <file path="/OptaMatchLineup.php" changelist="3ff2741c-c47a-42bb-9d0d-6bdbe7322a7c" time="1383429385319" ignored="false" />
@@ -65,11 +65,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="34" selection-start="75" selection-end="75" vertical-scroll-proportion="0.061412487">
+            <state line="4" column="34" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DownloadCommand.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Command/DownloadCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="20" selection-start="30" selection-end="30" vertical-scroll-proportion="-1.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProcessCommand.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Command/ProcessCommand.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="1" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.732899">
+              <folding>
+                <element signature="e#6#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,15 +130,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OptaVenue.orm.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaVenue.orm.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="24" selection-start="66" selection-end="157" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="OptaMatchTeamStat.orm.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaMatchTeamStat.orm.yml">
           <provider selected="true" editor-type-id="text-editor">
@@ -137,15 +148,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Controller/StatsController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="22" selection-start="347" selection-end="347" vertical-scroll-proportion="-9.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -156,8 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Entity/OptaMatchPlayerStat.php" />
-        <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Controller/FileController.php" />
         <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaPlayer.orm.yml" />
         <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaMatchPlayerStat.orm.yml" />
         <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaMatchTeamStat.orm.yml" />
@@ -172,6 +172,8 @@
         <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaTeam.orm.yml" />
         <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Controller/FileProcessController.php" />
         <option value="$PROJECT_DIR$/web/README.md" />
+        <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Command/DownloadCommand.php" />
+        <option value="$PROJECT_DIR$/src/UTC/StatsBundle/Command/ProcessCommand.php" />
       </list>
     </option>
   </component>
@@ -558,14 +560,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1148" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32976654" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32976654" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.6702335" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.6702335" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -642,20 +644,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaMatchOfficial.orm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="26" selection-start="604" selection-end="604" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Resources/config/doctrine/OptaOfficial.orm.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="33" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Controller/StatsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="22" selection-start="347" selection-end="347" vertical-scroll-proportion="-9.375">
@@ -751,8 +739,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="34" selection-start="75" selection-end="75" vertical-scroll-proportion="0.061412487">
+        <state line="4" column="34" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Command/DownloadCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="20" selection-start="30" selection-end="30" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UTC/StatsBundle/Command/ProcessCommand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="1" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.732899">
+          <folding>
+            <element signature="e#6#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

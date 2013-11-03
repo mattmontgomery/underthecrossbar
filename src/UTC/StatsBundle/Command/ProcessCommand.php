@@ -1,6 +1,6 @@
 <?php
 /**
- * User: mmontgomery/deseretdigital
+ * User: mmontgomery
  * Date: 2013-11-01
  */
 
