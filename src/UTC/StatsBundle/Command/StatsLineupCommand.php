@@ -49,7 +49,7 @@ class StatsLineupCommand extends ContainerAwareCommand
     {
         $table = new TableHelper();
         $table->setLayout(TableHelper::LAYOUT_DEFAULT);
-        $table->setHeaders(array('Team','Matches','Avg'));
+        $table->setHeaders(array('Team','Matches','Avg','Std Dev'));
 
         $competition = $input->getOption('competition');
         $season = $input->getOption('season');
@@ -97,7 +97,12 @@ class StatsLineupCommand extends ContainerAwareCommand
                 $output_string .= ($diffs === 0 ? '.' : ($diffs === 11 ? 'a' : ($diffs === 10 ? 'x' : $diffs)));
                 $last_match = $match;
             }
-            $table->addRow(array($team_name,$output_string,round(array_sum($team_diffs) / count($team_diffs),2)));
+            $table->addRow(array(
+                $team_name,
+                $output_string,
+                round(array_sum($team_diffs) / count($team_diffs),2),
+                round(self::stddev($team_diffs),4),
+            ));
         }
         $table->render($output);
 
@@ -112,5 +117,18 @@ class StatsLineupCommand extends ContainerAwareCommand
             $t[$team->getTeamId()] = $team;
         }
         return $t;
+    }
+    static function stddev(array $aValues)
+    {
+        $fMean = array_sum($aValues) / count($aValues);
+        //print_r($fMean);
+        $fVariance = 0.0;
+        foreach ($aValues as $i)
+        {
+            $fVariance += pow($i - $fMean, 2);
+
+        }
+        $size = count($aValues) - 1;
+        return (float) sqrt($fVariance)/sqrt($size);
     }
 }
