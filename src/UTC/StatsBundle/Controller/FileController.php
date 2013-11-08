@@ -67,7 +67,11 @@ class FileController extends Controller implements ContainerAwareInterface
             $this->parseFileStructure($filename);
         }
         uasort($new_files, function($a, $b){ return strcasecmp($a['match_id'], $b['match_id']); });
-        return array_reverse($new_files,false)[0];
+        if($a = array_reverse($new_files,false)) {
+            return $a[0];
+        } else {
+            throw new Exception('No files found');
+        }
     }
 
     public function getProcessed()
@@ -76,10 +80,14 @@ class FileController extends Controller implements ContainerAwareInterface
         return $re->findBy(array('isProcessed'=>true));
     }
 
-    public function getUnprocessed()
+    public function getUnprocessed($check_dir = false)
     {
         if(!$this->checkDirectory()) {
             throw new Exception('Directory could not be loaded');
+        }
+        if($check_dir === false) {
+            $re = $this->getDoctrine()->getRepository('UTCStatsBundle:FileStats');
+            return array_map(function($obj) { return $obj->getFilename(); },$re->findBy(array('isProcessed'=>false)));
         }
         $files = $this->loadDirectory();
         $processed = array_map(function($obj) { return $obj->getFilename(); },$this->getProcessed());

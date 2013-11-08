@@ -2,6 +2,10 @@ UTC\StatsBundle\Entity\FileStats:
     type: entity
     table: null
     repositoryClass: UTC\StatsBundle\Entity\FileStatsRepository
+    indexes:
+        file_idx:
+            columns: [filename]
+            unique: true
     fields:
         id:
             type: integer
@@ -18,4 +22,8 @@ UTC\StatsBundle\Entity\FileStats:
         timestamp:
             type: datetimetz
             default: now
+    uniqueConstraints:
+        file_idx:
+            columns: [filename]
+            unique: true
     lifecycleCallbacks: {  }

@@ -47,7 +47,7 @@ class FileProcessController extends Controller
             $entity->setFilename($filename);
             $entity->setIsProcessed(false);
             $entity->setTimestamp(self::$date_time);
-            self::$em->merge($entity);
+//            self::$em->merge($entity);
         }
         $file = self::$file_controller->loadFile($filename);
         $this->processXml($file,false);

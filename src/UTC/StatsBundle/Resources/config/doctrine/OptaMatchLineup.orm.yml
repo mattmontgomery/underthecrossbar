@@ -30,4 +30,8 @@ UTC\StatsBundle\Entity\OptaMatchLineup:
         status:
             type: string
             length: 255
+    uniqueConstraints:
+        player_match_idx:
+            columns: [match_id,team_id,player_id]
+            unique: true
     lifecycleCallbacks: {  }

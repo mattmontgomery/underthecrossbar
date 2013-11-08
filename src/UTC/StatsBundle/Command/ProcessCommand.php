@@ -1,8 +1,4 @@
 <?php
-/**
- * User: mmontgomery
- * Date: 2013-11-01
- */
 
 namespace UTC\StatsBundle\Command;
 
@@ -22,6 +18,7 @@ class ProcessCommand extends ContainerAwareCommand
         $this
             ->setName('stats:process')
             ->addOption('process-files','p',InputOption::VALUE_REQUIRED,'Processed unprocessed files.')
+            ->addOption('check-directory','c',InputOption::VALUE_NONE,'Processed unprocessed files.')
         ;
     }
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -32,7 +29,7 @@ class ProcessCommand extends ContainerAwareCommand
         $processor->setContainer($this->getContainer());
         $verbosity = $output->getVerbosity();
         $processed = 0;
-        $unprocessed = $controller->getUnprocessed();
+        $unprocessed = $controller->getUnprocessed($input->getOption('check-directory'));
         $processor->processBatch($unprocessed);
     }
 }
