@@ -276,4 +276,32 @@ class OptaMatchGoal
     {
         return $this->matchId;
     }
+    /**
+     * @var integer
+     */
+    private $teamId;
+
+
+    /**
+     * Set teamId
+     *
+     * @param integer $teamId
+     * @return OptaMatchGoal
+     */
+    public function setTeamId($teamId)
+    {
+        $this->teamId = $teamId;
+    
+        return $this;
+    }
+
+    /**
+     * Get teamId
+     *
+     * @return integer 
+     */
+    public function getTeamId()
+    {
+        return $this->teamId;
+    }
 }

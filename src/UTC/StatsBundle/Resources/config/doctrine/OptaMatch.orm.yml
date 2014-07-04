@@ -23,14 +23,18 @@ UTC\StatsBundle\Entity\OptaMatch:
             column: competition_id
         teams:
             type: array
-        home_team_id:
+        homeTeamId:
             type: integer
-        away_team_id:
+            column: home_team_id
+        awayTeamId:
             type: integer
-        home_team_score:
+            column: away_team_id
+        homeTeamScore:
             type: integer
-        away_team_score:
+            column: home_team_score
+        awayTeamScore:
             type: integer
+            column: away_team_score
         seasonId:
             type: string
             length: 255

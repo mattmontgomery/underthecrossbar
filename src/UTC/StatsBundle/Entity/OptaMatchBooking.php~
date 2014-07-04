@@ -332,4 +332,32 @@ class OptaMatchBooking
     {
         return $this->bookingTimestamp;
     }
+    /**
+     * @var integer
+     */
+    private $teamId;
+
+
+    /**
+     * Set teamId
+     *
+     * @param integer $teamId
+     * @return OptaMatchBooking
+     */
+    public function setTeamId($teamId)
+    {
+        $this->teamId = $teamId;
+    
+        return $this;
+    }
+
+    /**
+     * Get teamId
+     *
+     * @return integer 
+     */
+    public function getTeamId()
+    {
+        return $this->teamId;
+    }
 }

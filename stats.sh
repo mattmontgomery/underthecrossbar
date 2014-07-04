@@ -1,0 +1,1 @@
+php app/console stats:team --season=2014 --stats=touches,total_pass,accurate_pass,total_through_pass 1899

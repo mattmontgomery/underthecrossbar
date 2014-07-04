@@ -66,7 +66,7 @@ class FileProcessController extends Controller
      * @param $files
      * @param int $batch_at
      */
-    public function processBatch($files,$batch_at = 5)
+    public function processBatch($files,$batch_at = 5,\Symfony\Component\Console\Output\OutputInterface $output = null)
     {
         self::$em = $this->getDoctrine()->getManager();
         self::$em->getconnection()->getConfiguration()->setSQLLogger(null);
@@ -77,6 +77,9 @@ class FileProcessController extends Controller
         $cycle = 0;
         foreach($files as $file) {
             $cycle++;
+            if($output) {
+                $output->writeln('Processing <info> ' . $file . '</info>');
+            }
             $this->processFile($file,($cycle % $batch_at === 0 ? true : false));
         }
         if(count($files) > 0) {

@@ -2,9 +2,12 @@ UTC\StatsBundle\Entity\OptaMatchPlayerStat:
     type: entity
     table: null
     indexes:
-        player_match_index:
+        player_match_stat_index:
             columns: [match_id,player_id,stat_type]
             unique: true
+    indexes:
+        player_match_index:
+            columns: [match_id,player_id]
     fields:
         id:
             type: integer

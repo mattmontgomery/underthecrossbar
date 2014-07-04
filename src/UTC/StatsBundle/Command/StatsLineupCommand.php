@@ -1,12 +1,4 @@
 <?php
-/**
- * User: mmontgomery/deseretdigital
- * Date: 2013-11-08
- */
-
-namespace UTC\StatsBundle\Command;
-
-
 namespace UTC\StatsBundle\Command;
 
 use Symfony\Component\Console\Command\Command;
@@ -29,7 +21,7 @@ class StatsLineupCommand extends ContainerAwareCommand
         $this->setName('stats:lineup')
             ->addOption('mode','m',InputOption::VALUE_REQUIRED,'','unique')
             ->addOption('competition','c',InputOption::VALUE_REQUIRED,'','98')
-            ->addOption('season','',InputOption::VALUE_REQUIRED,'','2013')
+            ->addOption('season','',InputOption::VALUE_REQUIRED,'','2014')
         ;
     }
 

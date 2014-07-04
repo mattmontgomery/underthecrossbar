@@ -1,11 +1,54 @@
-{% extends "TwitterBootstrapBundle::layout.html.twig" %}
-{% block title %}{% filter trim %}{% block subtitle %}{% endblock %} Under the Crossbar Stats{% endfilter %}{% endblock %}
-{% block body %}
-    <div class="container">
-        {% block nav %}{% endblock %}
-        <h1>{% block page_header %}{% endblock %}</h1>
-        {% block container %}
-        {% endblock %}
-        {% block footer %}<footer>Source: github.com/mmontgomery/utc-stats</footer>{% endblock %}
-    </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}UTC STATS{% endblock %}</title>
+    <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('/css/site.css') }}" rel="stylesheet" media="screen">
+    {% block stylesheets %}
+    {% endblock %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
+</head>
+<body>
+{% block nav %}
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#js-utc-navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/stats">UTC Stats</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="js-utc-navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="/stats">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players <b class="caret"></b></a>
+                        <ul class="dropdown-menu"><li><a href="/stats/players">Player List</a></li></ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teams <b class="caret"></b></a>
+                        <ul class="dropdown-menu"><li><a href="/stats/teams">Team List</a></li></ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
 {% endblock %}
+<div class="container">
+    {% block body %}{% endblock %}
+</div>
+{% block javascripts %}
+    <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
+    <script src="{{ asset('/js/jquery.js') }}"></script>
+    <script src="{{ asset('/js/bootstrap.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/js/lib/require/require-2.1.9.js') }}" data-main="{{ asset('/js/main.js') }}"></script>
+{% endblock %}
+</body>
+</html>

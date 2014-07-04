@@ -500,4 +500,25 @@ class OptaMatch
     {
         return $this->resultWinner;
     }
+    /**
+     * @var integer
+     */
+    private $homeTeamId;
+
+    /**
+     * @var integer
+     */
+    private $awayTeamId;
+
+    /**
+     * @var integer
+     */
+    private $homeTeamScore;
+
+    /**
+     * @var integer
+     */
+    private $awayTeamScore;
+
+
 }

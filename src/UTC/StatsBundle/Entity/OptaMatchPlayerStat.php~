@@ -136,4 +136,32 @@ class OptaMatchPlayerStat
     {
         return $this->statValue;
     }
+    /**
+     * @var integer
+     */
+    private $teamId;
+
+
+    /**
+     * Set teamId
+     *
+     * @param integer $teamId
+     * @return OptaMatchPlayerStat
+     */
+    public function setTeamId($teamId)
+    {
+        $this->teamId = $teamId;
+    
+        return $this;
+    }
+
+    /**
+     * Get teamId
+     *
+     * @return integer 
+     */
+    public function getTeamId()
+    {
+        return $this->teamId;
+    }
 }

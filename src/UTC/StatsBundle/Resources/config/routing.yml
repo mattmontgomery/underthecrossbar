@@ -1,3 +1,12 @@
 utc_stats_homepage:
-    pattern:  /home
+    pattern:  /
     defaults: { _controller: UTCStatsBundle:Default:index }
+
+_players:
+    pattern: /players
+    defaults: { _controller: UTCStatsBundle:FrontEnd:players }
+
+
+_teams:
+    pattern: /teams
+    defaults: { _controller: UTCStatsBundle:FrontEnd:teams }

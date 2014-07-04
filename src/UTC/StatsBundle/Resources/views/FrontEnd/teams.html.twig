@@ -1,0 +1,33 @@
+{% extends "UTCStatsBundle::layout.html.twig" %}
+
+{% block title %}UTCStatsBundle:FrontEnd:Players{% endblock %}
+
+{% block body %}
+    <h1>Team List <small>({{ teams|length }} players)</small></h1>
+    {% if term %}<h3>Searching for: {{ term }}</h3>{% endif %}
+    <form class="form-inline" method="get">
+        <div class="form-group">
+            <label class="sr-only" for="q">Query</label>
+            <input type="text" class="form-control" id="q" name="q" placeholder="Search teams">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for team in teams %}
+            <tr>
+                <td>{{ team.teamId }}</td>
+                <td>{{ team.name }}</td>
+                <td>{{ team.country }}</td>
+            {#</tr>#}
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

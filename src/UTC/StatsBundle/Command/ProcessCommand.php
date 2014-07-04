@@ -27,9 +27,10 @@ class ProcessCommand extends ContainerAwareCommand
         $processor = new FileProcessController();
         $controller->setContainer($this->getContainer());
         $processor->setContainer($this->getContainer());
+        $dir = $input->getOption('check-directory');
         $verbosity = $output->getVerbosity();
         $processed = 0;
-        $unprocessed = $controller->getUnprocessed($input->getOption('check-directory'));
-        $processor->processBatch($unprocessed);
+        $unprocessed = $controller->getUnprocessed($dir);
+        $processor->processBatch($unprocessed,5,$output);
     }
 }

@@ -22,8 +22,25 @@
         "friendsofsymfony/rest":"dev-master",
         "friendsofsymfony/rest-bundle":"dev-master",
         "twitter/bootstrap":"dev-master",
-        "twitter/bootstrap-bundle":"dev-master"
+        "twitter/bootstrap-bundle":"dev-master",
+        "braincrafted/bootstrap-bundle": "~2.0@alpha",
+        "twbs/bootstrap": "3.0.*",
+        "jquery/jquery":  "1.10.*"
+
     },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "jquery/jquery",
+                "version": "1.10.2",
+                "dist": {
+                    "url": "http://code.jquery.com/jquery-1.10.2.js",
+                    "type": "file"
+                }
+            }
+        }
+    ],
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -47,11 +64,9 @@
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
+        "symfony-assets-install": "symlink",
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
-        },
-        "branch-alias": {
-            "dev-master": "2.3-dev"
         }
     }
 }

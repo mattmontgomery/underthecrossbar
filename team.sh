@@ -1,0 +1,1 @@
+php app/console stats:team --season=2014 --stats=touches,total_pass,accurate_pass,fwd_pass,total_att_assist,poss_won_att_3rd,poss_won_mid_3rd,poss_won_def_3rd,head_clearance 1899
