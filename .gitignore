@@ -6,6 +6,7 @@
 /app/logs/*
 !app/cache/.gitkeep
 !app/logs/.gitkeep
+/dumps/
 /build/
 /vendor/
 /bin/

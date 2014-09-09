@@ -1,0 +1,13 @@
+parameters:
+#    utc_opta.example.class: UTC\OptaBundle\Example
+
+services:
+#    utc_opta.example:
+#        class: %utc_opta.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    utc_opta.file_controller:
+      class: UTC\OptaBundle\Controller\FileController
+
+    utc_opta.data_controller:
+      class: UTC\OptaBundle\Controller\DataController
+      arguments: ["@service_container"]

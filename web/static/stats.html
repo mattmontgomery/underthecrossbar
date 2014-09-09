@@ -1,0 +1,146 @@
+<html><head></head>
+
+<body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="http://underthecrossbar.com/data/c3.min.js" charset="utf-8"></script>
+
+</style>
+<style>
+@import url('http://underthecrossbar.com/data/c3.css');
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+.c3-line {
+  stroke-width: 2px;
+}
+</style>
+<script>
+jQuery(document).ready(function(){
+    var selected = "Real Salt Lake";
+    var interval = 5;
+    var chart;
+    var dataLoaded = function(data) {
+        var d = transformData(data.seasons["2014"].teams[selected],selected),
+            total = transformData(data.seasons["2014"].totals,'MLS 2014 average');
+        chart = c3.generate({
+            data: {
+                columns: [
+                    total.data,
+                ],
+                type: 'bar',
+                types: {
+                    "MLS 2014 average": 'area-spline',
+                },
+                colors: {
+                    "MLS 2014 average": 'RGBA(40,40,50,0.3)',
+                },
+            },
+            axis: {
+                x: {
+                    type: 'category',
+                    tick: {
+                        format: function(x) { var _x = interval * x; return _x + '-' + (_x+interval); }
+                    }
+                },
+                y: {
+                    tick: {
+                        format: function(x) { return Math.floor(x*100) + '%'; }
+                    }
+                }
+            },
+        });
+        jQuery('[data-field="team"]').on('change', function(ev) {
+            var $d2012 = transformData(data.seasons["2012"].teams[this.value], this.value + ' (2012)');
+            var $d2013 = transformData(data.seasons["2013"].teams[this.value], this.value + ' (2013)');
+            var $d2014 = transformData(data.seasons["2014"].teams[this.value], this.value + ' (2014)');
+            var chartLoadData = {
+                columns: [
+                    $d2012.data,
+                    $d2013.data,
+                    $d2014.data,
+                ],
+                unload: [
+                    selected + ' (2012)',
+                    selected + ' (2013)',
+                    selected + ' (2014)',
+                ],
+                groups: [
+                    [
+                        selected + ' (2012)',
+                        selected + ' (2013)',
+                        selected + ' (2014)',
+                    ]
+                ]
+            };
+            chartLoadData.types = {};
+            chartLoadData.types[this.value + ' (2012)'] = 'spline';
+            chartLoadData.types[this.value + ' (2013)'] = 'spline';
+            chartLoadData.types[this.value + ' (2014)'] = 'area-spline';
+            chartLoadData.colors = {};
+            chartLoadData.colors[this.value + ' (2012)'] = 'RGBA(100,100,200,0.6)';
+            chartLoadData.colors[this.value + ' (2013)'] = 'RGBA(100,100,100,0.6)';
+            chartLoadData.colors[this.value + ' (2014)'] = 'RGBA(100,200,100,0.8)';
+            chart.load(chartLoadData);
+            selected = this.value;
+        }).trigger('change');
+    };
+    var transformData = function(data, key) {
+        var transformedData = [key],
+            transformedKeys = [];
+        var sum = 0;
+        jQuery.each(data,function(){sum+=parseFloat(this) || 0;});
+        for(i = 0; i <= 100 / interval; i++) {
+            var idx = transformedKeys.push(i*interval);
+            transformedData[idx] = 0;
+        }
+        jQuery.each(data, function(idx, value) {
+            transformedData[Math.floor(idx / interval)+1] += (value / sum);
+        });
+        return { data: transformedData, keys: transformedKeys };
+    }
+
+    var data = jQuery.getJSON('http://www.underthecrossbar.com/data/rslsoapbox/AllGoals.json').done(dataLoaded).fail(function(resp,err) { console.error(err); });
+});
+</script>
+<div class="chart">
+    <div id="chart"></div>
+</div>
+<h4>Chart controls</h4>
+<div class="control">
+    <select data-field="team">
+        <option>Chicago Fire</option>
+        <option>Chivas USA</option>
+        <option>Colorado Rapids</option>
+        <option>Columbus Crew</option>
+        <option>D.C. United</option>
+        <option>FC Dallas</option>
+        <option>Houston Dynamo</option>
+        <option>LA Galaxy</option>
+        <option>Montreal Impact</option>
+        <option>New England Revolution</option>
+        <option>New York Red Bulls</option>
+        <option>Philadelphia Union</option>
+        <option>Portland Timbers</option>
+        <option selected="selected">Real Salt Lake</option>
+        <option>San Jose Earthquakes</option>
+        <option>Seattle Sounders FC</option>
+        <option>Sporting Kansas City</option>
+        <option>Toronto FC</option>
+        <option>Vancouver Whitecaps</option>
+    </select>
+</div>
+</body>

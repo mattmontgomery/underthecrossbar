@@ -193,7 +193,7 @@ class OptaMatch
      */
     public function setHomeTeamId($homeTeamId)
     {
-        $this->home_team_id = $homeTeamId;
+        $this->homeTeamId = $homeTeamId;
     
         return $this;
     }
@@ -205,7 +205,7 @@ class OptaMatch
      */
     public function getHomeTeamId()
     {
-        return $this->home_team_id;
+        return $this->homeTeamId;
     }
 
     /**
@@ -216,7 +216,7 @@ class OptaMatch
      */
     public function setAwayTeamId($awayTeamId)
     {
-        $this->away_team_id = $awayTeamId;
+        $this->awayTeamId = $awayTeamId;
     
         return $this;
     }
@@ -228,7 +228,7 @@ class OptaMatch
      */
     public function getAwayTeamId()
     {
-        return $this->away_team_id;
+        return $this->awayTeamId;
     }
 
     /**
@@ -239,8 +239,7 @@ class OptaMatch
      */
     public function setHomeTeamScore($homeTeamScore)
     {
-        $this->home_team_score = $homeTeamScore;
-    
+        $this->homeTeamScore = $homeTeamScore;
         return $this;
     }
 
@@ -251,7 +250,7 @@ class OptaMatch
      */
     public function getHomeTeamScore()
     {
-        return $this->home_team_score;
+        return $this->homeTeamScore;
     }
 
     /**
@@ -262,7 +261,7 @@ class OptaMatch
      */
     public function setAwayTeamScore($awayTeamScore)
     {
-        $this->away_team_score = $awayTeamScore;
+        $this->awayTeamScore = $awayTeamScore;
     
         return $this;
     }
@@ -274,7 +273,7 @@ class OptaMatch
      */
     public function getAwayTeamScore()
     {
-        return $this->away_team_score;
+        return $this->awayTeamScore;
     }
     /**
      * @var integer

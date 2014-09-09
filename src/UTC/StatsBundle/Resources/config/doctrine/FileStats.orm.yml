@@ -1,7 +1,6 @@
 UTC\StatsBundle\Entity\FileStats:
     type: entity
     table: null
-    repositoryClass: UTC\StatsBundle\Entity\FileStatsRepository
     indexes:
         file_idx:
             columns: [filename]
@@ -12,6 +11,11 @@ UTC\StatsBundle\Entity\FileStats:
             id: true
             generator:
                 strategy: AUTO
+        match_id:
+            type: integer
+        file_type:
+            type: string
+            length: 16
         filename:
             type: string
             length: 255

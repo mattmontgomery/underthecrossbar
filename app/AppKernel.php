@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new UTC\ScarfBundle\UTCScarfBundle(),
             new Twitter\BootstrapBundle\TwitterBootstrapBundle(),
             new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
+            new UTC\OptaBundle\UTCOptaBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

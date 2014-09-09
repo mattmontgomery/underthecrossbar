@@ -1,3 +1,7 @@
+utc_opta:
+    resource: "@UTCOptaBundle/Resources/config/routing.yml"
+    prefix:   /
+
 utc_scarf:
     resource: "@UTCScarfBundle/Resources/config/routing.yml"
     prefix:   /

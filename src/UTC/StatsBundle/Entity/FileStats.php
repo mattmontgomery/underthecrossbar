@@ -108,4 +108,60 @@ class FileStats
     {
         return $this->timestamp;
     }
+    /**
+     * @var integer
+     */
+    private $match_id;
+
+
+    /**
+     * Set match_id
+     *
+     * @param integer $matchId
+     * @return FileStats
+     */
+    public function setMatchId($matchId)
+    {
+        $this->match_id = $matchId;
+    
+        return $this;
+    }
+
+    /**
+     * Get match_id
+     *
+     * @return integer 
+     */
+    public function getMatchId()
+    {
+        return $this->match_id;
+    }
+    /**
+     * @var string
+     */
+    private $file_type;
+
+
+    /**
+     * Set file_type
+     *
+     * @param string $fileType
+     * @return FileStats
+     */
+    public function setFileType($fileType)
+    {
+        $this->file_type = $fileType;
+    
+        return $this;
+    }
+
+    /**
+     * Get file_type
+     *
+     * @return string 
+     */
+    public function getFileType()
+    {
+        return $this->file_type;
+    }
 }

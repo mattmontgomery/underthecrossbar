@@ -25,7 +25,8 @@
         "twitter/bootstrap-bundle":"dev-master",
         "braincrafted/bootstrap-bundle": "~2.0@alpha",
         "twbs/bootstrap": "3.0.*",
-        "jquery/jquery":  "1.10.*"
+        "jquery/jquery":  "1.10.*",
+        "goodby/csv": "*"
 
     },
     "repositories": [
